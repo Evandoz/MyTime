@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Time :color="color" :border="border" :bg="bg" :size="size" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Time from "@/components/Time.vue";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    Time
+  },
+  data () {
+    return {
+      color: "#fff",
+      border: "#fefefe",
+      bg: "#000",
+      size: "500px"
+    }
   }
 };
 </script>
+
+<style lang="stylus" scoped>
+.home
+  padding-bottom 10vh
+</style>
